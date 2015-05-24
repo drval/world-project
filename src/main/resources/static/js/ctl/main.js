@@ -1,7 +1,8 @@
 (function() {
 	
-	var mainctl = function($scope) {
-		$scope.title = "World-project using spring boot and Angular";
+	var mainctl = function(worldApp) {
+		var scope = this;
+		scope.appName = worldApp.appName;
 	};
 	
 	var app = angular.module("wp");
