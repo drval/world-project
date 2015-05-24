@@ -1,4 +1,4 @@
-package world;
+package world.entity;
 
 public enum Continent {
 	ASIA("Asia"),

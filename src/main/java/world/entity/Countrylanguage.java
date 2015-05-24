@@ -1,4 +1,4 @@
-package world;
+package world.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
