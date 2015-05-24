@@ -1,12 +1,12 @@
 (function() {
 	var app = angular.module("wp", []);
 	
-	app.provider('worldApp', function() {
+	app.provider('worldApp', function(constants) {
 		
 		this.$get = function() {
-			var appName = "Справочник стран";
-			var appDesc = "Отображает информацию о странах";
-			var version = "1.0";
+			var appName = constants.APP_TITLE;
+			var appDesc = constants.APP_DESCRIPTION;
+			var version = constants.APP_VERSION;
 			
 			if (includeVersionInTitle) {
 				appName += ' ' + version;
@@ -24,8 +24,9 @@
 		};
 	});
 	
-	app.config(function(worldAppProvider) {
+	app.config(function(worldAppProvider, constants) {
 		worldAppProvider.setIncludeVersionInTitle(true);
+		console.log('title from constants service: ' + constants.APP_TITLE);
 	});
 	
 }());
